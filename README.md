@@ -14,3 +14,14 @@ What it can do on the front and:
 - View devices & networks tables
 
 ![Screenshot of the dashboard](static/screenshot.png)
+
+
+## Usage
+
+To set up the environment, please execute some form of the following commands:
+
+`python3 -m venv .env && source .env/bin/activate && pip3 install -r reqirements.txt`
+
+and to run it:
+
+`python3 app.py`
