@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Device</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Modify Device: {{ device.hostname }}</h1>
+
+        <form method="POST">
+            <div class="mb-3">
+                <label for="device_type" class="form-label">Device Type</label>
+                <input type="text" class="form-control" id="device_type" name="device_type" value="{{ device.device_type }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="mgmt_ip" class="form-label">Management IP</label>
+                <input type="text" class="form-control" id="mgmt_ip" name="mgmt_ip" value="{{ device.mgmt_ip }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="user" class="form-label">User</label>
+                <input type="text" class="form-control" id="user" name="user" value="{{ device.user }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" value="{{ device.password }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ios_version" class="form-label">IOS Version</label>
+                <input type="text" class="form-control" id="ios_version" name="ios_version" value="{{ device.ios_version }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" value="{{ device.location }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="device_owner" class="form-label">Device Owner</label>
+                <input type="text" class="form-control" id="device_owner" name="device_owner" value="{{ device.device_owner }}" required>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">Save Changes</button>
+            </div>
+        </form>
+
+        <div class="d-flex justify-content-center mt-4">
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
